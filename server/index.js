@@ -45,7 +45,6 @@ app.post("/exercise", (req, res) => {
   .sort({id: -1})
   .limit(1)
   .then((exercise)=>{
-    console.log(exercise)
     const newExercise = new Exercise ({
       id: (exercise[0].id + 1),
       name: req.body.name,
@@ -61,7 +60,7 @@ app.post("/exercise", (req, res) => {
       res.end();
     })
     .catch((err) => {
-      console.error(err, 'Error saving to database');
+      console.error('Error saving to database', err);
     })
   })
 });
