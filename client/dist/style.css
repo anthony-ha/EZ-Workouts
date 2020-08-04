@@ -1,0 +1,109 @@
+body {
+  background-color: #d1d1e0;
+  padding-left:30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  display: grid;
+  grid-template:
+   "title title" 150px
+   "quote quote" auto
+   "customTitle suggestionTitle" 75px
+   "custom suggestion" 300px
+   / 1fr 1fr;
+}
+
+.container2{
+  display: grid;
+  grid-area:custom;
+  grid-template:
+    "form" 300px
+    "routine-title" auto
+    "routine" auto
+    /1fr;
+}
+
+.logo {
+  grid-area:title;
+  font-family: 'Karla', sans-serif;
+  font-size: 60px;
+  align-self: center;
+  justify-self: center;
+}
+
+.quote {
+  grid-area: quote;
+  font-family: 'Indie Flower', cursive;
+  background-color:	 #c2c2d6;
+  justify-self: center;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  font-size:18px;
+}
+
+.customForm{
+  grid-area:form;
+  max-width:500 px;
+  margin: 2rem auto;
+  padding:1rem;
+}
+
+.suggestionForm{
+  grid-area: suggestion;
+}
+
+.routine {
+  grid-area:routine;
+  padding-bottom:50px;
+}
+
+.customTitle {
+  grid-area: customTitle;
+  align-self: center;
+  font-family: 'Karla', sans-serif;
+}
+
+.workoutTitle {
+  font-family: 'Karla', sans-serif;
+  font-size: 25px;
+  padding: 10px;
+}
+
+.suggestionTitle{
+  grid-area: suggestionTitle;
+  align-self: center;
+  font-family: 'Karla', sans-serif;
+}
+
+.exercise {
+  font-family: 'Karla', sans-serif;
+  border:1px solid black;
+  max-width: 350px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-top:7px;
+  margin-bottom:7px;
+}
+
+label {
+  display: block;
+  font-family: 'Karla', sans-serif;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+
+input {
+  display: block;
+  font-family: 'Karla', sans-serif;
+  margin-bottom: 10px;
+  width:50%;
+}
