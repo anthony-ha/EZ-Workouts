@@ -40,6 +40,32 @@ app.get("/quote", (req,res) => {
     })
 });
 
+app.post("/exercise", (req, res) => {
+  Exercise.find()
+  .sort({id: -1})
+  .limit(1)
+  .then((exercise)=>{
+    console.log(exercise)
+    const newExercise = new Exercise ({
+      id: (exercise[0].id + 1),
+      name: req.body.name,
+      category: req.body.category,
+      equipment: req.body.equipment,
+      demo: req.body.demo,
+      sets: req.body.sets,
+      reps: req.body.reps,
+      suggestion: true
+    })
+    newExercise.save()
+    .then(() => {
+      res.end();
+    })
+    .catch((err) => {
+      console.error(err, 'Error saving to database');
+    })
+  })
+});
+
 const server = app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
