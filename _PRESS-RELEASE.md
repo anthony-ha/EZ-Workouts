@@ -42,3 +42,12 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Closing and Call to Action ##
   > Get started on your dream body today!! The hardest part of going to the gym is actually going!
+
+## Cloning this project ##
+  > After cloning this project, you're going to want to run a few commands to get started:
+
+  > Install necessary dependencies "npm install"
+
+  > Compile your files with webpack and babel "npm run build"
+
+  > Start up your server "npm run start"
